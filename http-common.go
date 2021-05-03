@@ -23,7 +23,7 @@ func RespondSuccessWithSession(w http.ResponseWriter, code int, message, session
 }
 
 func RespondError(w http.ResponseWriter, code int, message string) {
-	RespondJSONWithSession(w, code, map[string]string{"error": message})
+	RespondJSON(w, code, map[string]string{"error": message})
 }
 
 func RespondErrorWithSession(w http.ResponseWriter, code int, message, session string) {
